@@ -16,7 +16,7 @@ func main() {
 
 	message := os.Args[1]
 
-	f, errCreate := os.Create("odevs.txt")
+	f, errCreate := os.Create("file.txt")
 	if errCreate != nil {
 		log.Fatal("Error opening file") // returns exit code 1
 	}
@@ -27,5 +27,5 @@ func main() {
 		log.Fatal("Error opening file") // returns exit code 1
 	}
 	f.Sync()
-	fmt.Println("Message written to odevs.txt")
+	fmt.Println("Message successfully written to the file.")
 }
